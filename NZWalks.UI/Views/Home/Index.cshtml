@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    Layout = null; // To remove any layout template
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Zealand Walks and Trails</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>New Zealand Walks and Trails</h1>
+    </header>
+    <nav>
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Regions" asp-action="Index">Regions</a>
+        <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <a asp-controller="Home" asp-action="Index">About</a>
+       
+    </nav>
+
+
+   
+
+    <div class="hero">
+        <div class="overlay"></div> 
+        <div class="hero-content">
+            <h1>Welcome to New Zealand</h1>
+            <p class="sub-title">Explore breathtaking walks and trails amidst stunning natural landscapes.</p>
+        </div>
+    </div>
+
+    <div class="sized-box"></div>
+    <div class="container">
+        <div class="titles">
+            Popular Trails
+        </div>
+        <div class="trail">
+            <img src="/images/trails-1.jpg" alt="Trail Image 1">
+            <div class="trail-content">
+                <h2>Tongariro Alpine Crossing</h2>
+                <p>The Tongariro Alpine Crossing is a one-day hike across a volcanic landscape in Tongariro National Park. It passes by spectacular scenery including emerald lakes, volcanic craters, and steaming vents.</p>
+            </div>
+        </div>
+        <div class="trail">
+            <div class="trail-content">
+                <h2>Abel Tasman Coast Track</h2>
+                <p>The Abel Tasman Coast Track is a coastal walk in Abel Tasman National Park, offering stunning views of sandy beaches, lush forests, and turquoise waters. It can be done as a multi-day hike or sections can be explored as day trips.</p>
+            </div>
+            <img src="/images/trails-2.jpg" alt="Trail Image 2">
+        </div>
+        <div class="trail">
+            <img src="/Images/trails-3.jpg" alt="Trail Image 3">
+            <div class="trail-content">
+                <h2>Milford Track</h2>
+                <p>The Milford Track is one of New Zealand's Great Walks, renowned for its breathtaking scenery including towering mountains, pristine lakes, and cascading waterfalls. It's a multi-day hike through Fiordland National Park.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="sized-box"></div>
+    <div class="dividor"></div>
+
+    <div class="sized-box"></div>
+
+    <div class="container">
+        <div class="titles">
+            Explore in New Zealand
+        </div>
+        <div class="highlight">
+
+            <div class="activity">
+                <img src="/Images/activity-1.jpg" alt="Activity Image 1">
+                <h2>Waitomo Glowworm Caves</h2>
+                <p>Explore the magical world of glowworms in the Waitomo Glowworm Caves, where thousands of tiny lights illuminate the underground caverns.</p>
+            </div>
+            <div class="activity">
+                <img src="~/Images/activity-2.jpg" alt="Activity Image 2">
+                <h2>Franz Josef Glacier</h2>
+                <p>Experience the awe-inspiring Franz Josef Glacier, where you can take guided hikes or scenic helicopter tours to witness the icy beauty up close.</p>
+            </div>
+            <div class="activity">
+                <img src="/Images/activity-3.jpg" alt="Activity Image 3">
+                <h2>Maori Cultural Experiences</h2>
+                <p>Immerse yourself in Maori culture with traditional performances, feasts (hangi), and visits to marae (Maori meeting grounds) throughout New Zealand.</p>
+            </div>
+          
+        </div>
+
+
+
+    </div>
+    <footer class="footer text-muted">
+        <div class="container">
+            &copy; 2024 New Zealand Walks and Trails. All rights reserved.
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>

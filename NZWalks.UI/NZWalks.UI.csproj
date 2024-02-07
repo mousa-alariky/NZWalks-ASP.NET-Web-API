@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\hero_section.jpg" />
+    <None Include="wwwroot\Images\istockphoto-1454096664-1024x1024.jpg" />
+    <None Include="wwwroot\Images\k8--JKLa91sm3I-unsplash.jpg" />
+    <None Include="wwwroot\Images\k8-hTpeKY0Y5rQ-unsplash.jpg" />
+    <None Include="wwwroot\Images\k8-ou7hYQ2kkvE-unsplash.jpg" />
+    <None Include="wwwroot\Images\kishan-modi-t9Tkt1T2CVk-unsplash.jpg" />
+    <None Include="wwwroot\Images\luca-calderone-BeTWMGbtrfs-unsplash.jpg" />
+    <None Include="wwwroot\Images\sulthan-auliya-42jI9pO24kA-unsplash.jpg" />
+    <None Include="wwwroot\Images\tim-swaan-eOpewngf68w-unsplash.jpg" />
+    <None Include="wwwroot\Images\toby-hall-F51wS6x-9nY-unsplash.jpg" />
+    <None Include="wwwroot\Images\toby-hall-_-osXbkmLPk-unsplash.jpg" />
+    <None Include="wwwroot\Images\tyler-lastovich-BVuF7933Pog-unsplash.jpg" />
+  </ItemGroup>
+
+</Project>
