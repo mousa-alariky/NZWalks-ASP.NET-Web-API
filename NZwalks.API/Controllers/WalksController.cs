@@ -36,7 +36,6 @@ namespace NZwalks.API.Controllers
             //map walk domain to dto and return dto
             return Ok(mapper.Map<WalkDto>(walkDomain));
 
-
         }
 
 

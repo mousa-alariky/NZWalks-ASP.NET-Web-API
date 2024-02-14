@@ -19,6 +19,8 @@ namespace NZwalks.API.Controllers
             this.tokenRepsitory = tokenRepsitory;
         }
 
+
+        // create a new user
         [HttpPost]
         [Route("Register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequestDto registerRequestDto)
@@ -47,6 +49,8 @@ namespace NZwalks.API.Controllers
             return BadRequest("Something went wrong!");
         }
 
+
+        // login and create token
         [HttpPost]
         [Route("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequestDto)
@@ -81,4 +85,4 @@ namespace NZwalks.API.Controllers
             return BadRequest("Username or password incorrect.");
         }
     }
-}
+};

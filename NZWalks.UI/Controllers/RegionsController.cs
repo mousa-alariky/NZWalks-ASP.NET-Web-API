@@ -10,9 +10,7 @@ namespace NZWalks.UI.Controllers
     public class RegionsController : Controller
     {
         // Obtain the access token
-        string accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJXcml0ZXIiLCJleHAiOjE3MDg1MzI1MTIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcwMDAvIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwMC8ifQ.ahcjFJBEri6R9N1wf4mqhZm1h_IdeOHllLep7ceZ8V0";
-
-
+        string accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJuZXdAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiV3JpdGVyIiwiZXhwIjoxNzA5MTUzNzY5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDAwLyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcwMDAvIn0.Kca1kJo3NoCh_EiGUIalb6191nOu8FGsWq7XVYVNZR4";
         private readonly IHttpClientFactory httpClientFactory;
 
         public RegionsController(IHttpClientFactory httpClientFactory)

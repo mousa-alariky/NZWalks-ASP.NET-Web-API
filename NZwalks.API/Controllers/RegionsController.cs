@@ -42,7 +42,6 @@ namespace NZalks.API.Controllers
 
             //return status 201 created  success...
             return CreatedAtAction(nameof(GetById), new { id = regionsDto.Id }, regionsDto);
-
         }
 
 
