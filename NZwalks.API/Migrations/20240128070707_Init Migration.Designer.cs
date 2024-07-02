@@ -6,10 +6,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NZwalks.API.Data;
+using NZWalks.API.Data;
 
 #nullable disable
 
-namespace NZwalks.API.Migrations
+namespace NZWalks.API.Migrations
 {
     [DbContext(typeof(NZWalksDbContext))]
     [Migration("20240128070707_Init Migration")]

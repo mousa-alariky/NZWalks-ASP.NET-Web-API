@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using NZwalks.API.Data;
-using NZwalks.API.Mappings;
-using NZwalks.API.Repositories;
+using NZWalks.API.Data;
+using NZWalks.API.Mappings;
+using NZWalks.API.Repositories;
 using System.Reflection.Metadata;
 using System.Text;
 using Microsoft.OpenApi.Models;
@@ -67,7 +67,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksAuthConne
 // Inject the IRegionRepository with SQLRegionRepository
 builder.Services.AddScoped<IRegionRepository, SQLRegionRepository>();
 // Inject the IWalkRepository with SQLWalkRepository
-builder.Services.AddScoped<IWalkRepository, SQLWalkRepository>();
+builder.Services.AddScoped<IWalkRepository, SqlWalkRepository>();
 // Inject the ITokenRepository with SQLWalkRepository
 builder.Services.AddScoped<ITokenRepsitory, TokenRepository>();
 

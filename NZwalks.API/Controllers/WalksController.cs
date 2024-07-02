@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using NZwalks.API.CustomActionFilters;
-using NZwalks.API.Models.Domain;
-using NZwalks.API.Models.DTO;
-using NZwalks.API.Repositories;
+using NZWalks.API.CustomActionFilters;
+using NZWalks.API.Models.Domain;
+using NZWalks.API.Models.DTO;
+using NZWalks.API.Repositories;
 
-namespace NZwalks.API.Controllers
+namespace NZWalks.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

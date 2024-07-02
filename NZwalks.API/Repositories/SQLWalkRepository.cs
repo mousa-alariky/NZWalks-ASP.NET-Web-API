@@ -1,35 +1,33 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
-using NZwalks.API.Data;
-using NZwalks.API.Models.Domain;
-using System.Diagnostics.Eventing.Reader;
+﻿using Microsoft.EntityFrameworkCore;
+using NZWalks.API.Data;
+using NZWalks.API.Models.Domain;
 
-namespace NZwalks.API.Repositories
+namespace NZWalks.API.Repositories
 {
-    public class SQLWalkRepository : IWalkRepository
+    public class SqlWalkRepository : IWalkRepository
     {
-        private readonly NZWalksDbContext dbContext;
+        private readonly NZWalksDbContext _dbContext;
 
-        public SQLWalkRepository(NZWalksDbContext dbContext)
+        public SqlWalkRepository(NZWalksDbContext dbContext)
         {
-            this.dbContext = dbContext;
+            this._dbContext = dbContext;
         }
 
         public async Task<Walk> CreateAsync(Walk walk)
         {
-            await dbContext.AddAsync(walk);
-            await dbContext.SaveChangesAsync();
+            await _dbContext.AddAsync(walk);
+            await _dbContext.SaveChangesAsync();
             return walk;
         }
 
 
         public async Task<List<Walk>> GetAllAsync(
             string? filterOn = null, string? filterQuery = null,
-            string? sortyBy = null, bool isAscending = true,
+            string? sortBy = null, bool isAscending = true,
             int pageNumber = 1, int pageSize = 1000
             )
         {
-            var walks = dbContext.Walks.Include("Difficulty").Include("Region").AsQueryable();
+            var walks = _dbContext.Walks.Include("Difficulty").Include("Region").AsQueryable();
 
             // filtering
             if (string.IsNullOrWhiteSpace(filterOn) == false && string.IsNullOrWhiteSpace(filterQuery) == false)
@@ -42,13 +40,13 @@ namespace NZwalks.API.Repositories
             }
 
             // sorting
-            if (string.IsNullOrWhiteSpace(sortyBy) == false)
+            if (string.IsNullOrWhiteSpace(sortBy) == false)
             {
-                if (sortyBy.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                if (sortBy.Equals("Name", StringComparison.OrdinalIgnoreCase))
                 {
                     walks = isAscending ? walks.OrderBy(x => x.Name) : walks.OrderByDescending(x => x.Name);
                 }
-                else if (sortyBy.Equals("Length", StringComparison.OrdinalIgnoreCase))
+                else if (sortBy.Equals("Length", StringComparison.OrdinalIgnoreCase))
                 {
                     walks = isAscending ? walks.OrderBy(x => x.LengthInKm) : walks.OrderByDescending(x => x.LengthInKm);
                 }
@@ -64,12 +62,12 @@ namespace NZwalks.API.Repositories
 
         public async Task<Walk?> GetByIdAsync(Guid id)
         {
-            return await dbContext.Walks.Include("Difficulty").Include("Region").FirstOrDefaultAsync(x => x.Id == id);
+            return await _dbContext.Walks.Include("Difficulty").Include("Region").FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<Walk?> UpdateAsync(Guid id, Walk walk)
         {
-            var existingWalk = await dbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);
+            var existingWalk = await _dbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);
             if (existingWalk == null)
             {
                 return null;
@@ -82,21 +80,21 @@ namespace NZwalks.API.Repositories
             existingWalk.DifficultyId = walk.DifficultyId;
             existingWalk.RegionId = walk.RegionId;
 
-            await dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
 
             return existingWalk;
         }
 
         public async Task<Walk?> DeleteAsync(Guid id)
         {
-            var existingWalk = await dbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);
+            var existingWalk = await _dbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);
             if (existingWalk == null)
             {
                 return null;
             }
 
-            dbContext.Walks.Remove(existingWalk);
-            await dbContext.SaveChangesAsync();
+            _dbContext.Walks.Remove(existingWalk);
+            await _dbContext.SaveChangesAsync();
             return existingWalk;
         }
     }

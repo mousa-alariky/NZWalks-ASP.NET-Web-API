@@ -4,7 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace NZwalks.API.Repositories
+namespace NZWalks.API.Repositories
 {
     public class TokenRepository : ITokenRepsitory
     {

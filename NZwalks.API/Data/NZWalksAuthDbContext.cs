@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace NZwalks.API.Data
+namespace NZWalks.API.Data
 {
     public class NZWalksAuthDbContext : IdentityDbContext
     {

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using NZwalks.API.Models.Domain;
-using NZwalks.API.Models.DTO;
+using NZWalks.API.Models.Domain;
+using NZWalks.API.Models.DTO;
 
-namespace NZwalks.API.Mappings
+namespace NZWalks.API.Mappings
 {
     public class AutoMapperProfiles: Profile
     {

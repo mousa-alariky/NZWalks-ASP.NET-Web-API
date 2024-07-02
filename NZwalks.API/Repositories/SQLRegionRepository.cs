@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
-using NZwalks.API.Data;
-using NZwalks.API.Models.Domain;
+using NZWalks.API.Data;
+using NZWalks.API.Models.Domain;
 
-namespace NZwalks.API.Repositories
+namespace NZWalks.API.Repositories
 {
     public class SQLRegionRepository : IRegionRepository
     {

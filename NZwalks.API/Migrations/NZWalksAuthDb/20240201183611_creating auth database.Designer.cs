@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NZwalks.API.Data;
+using NZWalks.API.Data;
 
 #nullable disable
 
-namespace NZwalks.API.Migrations.NZWalksAuthDb
+namespace NZWalks.API.Migrations.NZWalksAuthDb
 {
     [DbContext(typeof(NZWalksAuthDbContext))]
     [Migration("20240201183611_creating auth database")]

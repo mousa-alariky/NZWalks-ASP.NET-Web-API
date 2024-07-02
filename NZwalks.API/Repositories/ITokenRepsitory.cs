@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace NZwalks.API.Repositories
+namespace NZWalks.API.Repositories
 {
     public interface ITokenRepsitory
     {
