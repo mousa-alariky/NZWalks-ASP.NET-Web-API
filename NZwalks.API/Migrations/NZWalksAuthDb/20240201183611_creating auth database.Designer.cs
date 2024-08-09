@@ -13,7 +13,7 @@ namespace NZWalks.API.Migrations.NZWalksAuthDb
 {
     [DbContext(typeof(NZWalksAuthDbContext))]
     [Migration("20240201183611_creating auth database")]
-    partial class creatingauthdatabase
+    partial class CreatingAuthDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace NZWalks.API.Repositories
 {
-    public class TokenRepository : ITokenRepsitory
+    public class TokenRepository : ITokenRepository
     {
         private readonly IConfiguration configuration;
 

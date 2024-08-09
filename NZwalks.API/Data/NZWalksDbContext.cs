@@ -14,6 +14,7 @@ namespace NZWalks.API.Data
         public DbSet<Difficulty> Difficulties { get; set; }
         public DbSet<Region> Regions { get; set; }
         public DbSet<Walk> Walks { get; set; }
+        public DbSet<Image> Images { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -90,12 +91,8 @@ namespace NZWalks.API.Data
                     RegionImageUrl = "https://th.bing.com/th/id/R.4a2c082592782100a50e5c4b13aaedb8?rik=rNZjmrDwRoCbNg&pid=ImgRaw&r=0"
                 },
             };
+
             modelBuilder.Entity<Region>().HasData(regions);
-
-
-
-
-
         }
     }
 }

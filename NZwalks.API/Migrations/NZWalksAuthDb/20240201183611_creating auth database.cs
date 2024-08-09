@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace NZWalks.API.Migrations.NZWalksAuthDb
 {
     /// <inheritdoc />
-    public partial class creatingauthdatabase : Migration
+    public partial class CreatingAuthDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
